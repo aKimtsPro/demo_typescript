@@ -1,0 +1,16 @@
+{
+  "name": "demo_typescript",
+  "version": "1.0.0",
+  "description": "petite demo pour typescript",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx tsc --watch",
+    "run": "node out/demo_typage.js"
+  },
+  "author": "akimts",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
