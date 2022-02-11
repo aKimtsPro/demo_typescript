@@ -45,6 +45,14 @@ function maFunc(error_message: string): never {
     throw error_message;
 }
 
+// Les fonctions
+
+function addition(m1: number, m2: number, m3?: number): number{
+    return m3 ? m1+m2+m3 : m1+m2;
+}
+
+const rslt = addition(1,2);
+
 // Créer des types
 
 // union de types
@@ -99,7 +107,48 @@ type Machin = {
     }
 }[] | null;
 
-let truc: Machin = ? ;
+let truc: Machin = [{
+    id: '1',
+    alias: {
+        nom: new Date(),
+        autre: new Date(2020,1,1)
+    }
+}];
+
+type MonType = 'salut' | 'au revoir';
+
+
+
+let maVar: MonType = 'au revoir';
+
+type MonAutreType = (p1: string, p2: number) => never;
+let func1: MonAutreType = (param1: string, param2: number) => {
+    throw param1+param2;
+} 
+
+type Type1 = Date | string;
+type Type2 = string | number;
+type TypeInter = Type1 & Type2;
+
+let varInter: TypeInter = 'salut';
+
+let tupleExample : [ string, number, 'y'|'n' ] = [ 'salut', 15, 'n' ]
+
+type Voiture = {
+    puissance: number,
+    nbrPorte: number,
+    immatriculation?: string
+}
+
+let maVoiture: Voiture = {
+    puissance: 80,
+    nbrPorte: 3,
+    // immatriculation: '1-AAA-111' // Je peux ne pas la mettre sans soucis
+}
+
+console.log(maVoiture.immatriculation); // undefined
+
+
 // Enums
 
 enum Couleur {
@@ -111,3 +160,4 @@ enum Couleur {
 let ma_couleur: Couleur = Couleur.GREEN;
 
 console.log(ma_couleur.toString());
+

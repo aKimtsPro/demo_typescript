@@ -31,6 +31,11 @@ saipa = 5;
 function maFunc(error_message) {
     throw error_message;
 }
+// Les fonctions
+function addition(m1, m2, m3) {
+    return m3 ? m1 + m2 + m3 : m1 + m2;
+}
+const rslt = addition(1, 2);
 // Créer des types
 // union de types
 let naissance; // chaine, Date
@@ -57,7 +62,25 @@ let t1 = {
     }
 };
 let t2 = t1;
-let truc =  ?  : ;
+let truc = [{
+        id: '1',
+        alias: {
+            nom: new Date(),
+            autre: new Date(2020, 1, 1)
+        }
+    }];
+let maVar = 'au revoir';
+let func1 = (param1, param2) => {
+    throw param1 + param2;
+};
+let varInter = 'salut';
+let tupleExample = ['salut', 15, 'n'];
+let maVoiture = {
+    puissance: 80,
+    nbrPorte: 3,
+    // immatriculation: '1-AAA-111' // Je peux ne pas la mettre sans soucis
+};
+console.log(maVoiture.immatriculation); // undefined
 // Enums
 var Couleur;
 (function (Couleur) {
